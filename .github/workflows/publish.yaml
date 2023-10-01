@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@kaoto-next'
+          scope: '@kaoto'
           cache: 'yarn'
 
       # Install dependencies
@@ -34,7 +34,7 @@ jobs:
         run: yarn run test
 
       # Build packages
-      - name: Build @kaoto-next/uniforms-patternfly
+      - name: Build @kaoto/uniforms-patternfly
         run: yarn run build
 
       # Version and publish
@@ -43,7 +43,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           yarn publish

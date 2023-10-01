@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@kaoto-next'
+          scope: '@kaoto'
           cache: 'yarn'
 
       # Install dependencies
@@ -27,5 +27,5 @@ jobs:
         run: yarn run test
 
       # Build packages
-      - name: Build @kaoto-next/uniforms-patternfly
+      - name: Build @kaoto/uniforms-patternfly
         run: yarn run build
