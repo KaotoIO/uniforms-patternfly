@@ -1,9 +1,16 @@
+# This is a fork of the original library [@kie-tools/uniforms-patternfly](https://github.com/kiegroup/kie-tools/blob/15db722602e7029e2350d27c4c53eedc6ab6657f/packages/uniforms-patternfly/README.md)
+The goal of this fork is to update the following dependencies to the latest versions:
+1. Patternfly v5
+2. React v18
+3. React-Dom v18
+4. uniforms v4.0.0-alpha.5
+
 # Basic usage
 
 `uniforms` is a plugin for React to be able to create dynamic forms with built-in state management and form validation.
 `uniforms` provides you with simple re-usable form components which allows for rapid prototyping and cleaner React components.
 
-This package extends uniforms to provide [Patternfly React](https://www.patternfly.org/v4/) components inside your forms.
+This package extends uniforms to provide [Patternfly React](https://www.patternfly.org/) components inside your forms.
 For more information about `uniforms` please go to https://uniforms.tools/
 
 Looking for building mobile enabled forms? Check [Uniforms-ionic](https://github.com/aerogear/uniforms-ionic) package that provides Ionic extensions
@@ -19,9 +26,9 @@ To start using uniforms, we have to install three independent packages:
 In this example, we will use the JSON Schema to describe our desired data format and style our form using the Pattenfly UI theme.
 
 ```shell
-npm install uniforms@^3.10.2
-npm install uniforms-bridge-json-schema@^3.10.2
-npm install @kie-tools/uniforms-patternfly
+npm install uniforms@^4.0.0-alpha.5
+npm install uniforms-bridge-json-schema@^4.0.0-alpha.5
+npm install @kaoto-next/uniforms-patternfly
 npm install @patternfly/react-core @patternfly/react-icons
 ```
 
@@ -72,7 +79,7 @@ function createValidator(schema) {
   };
 }
 
-const bridge = new JSONSchemaBridge(schema, createValidator(schema));
+const bridge = new JSONSchemaBridge({ schema, validator: createValidator(schema) });
 ```
 
 ### 4. Finally, use it in a form! 🎉
@@ -82,7 +89,7 @@ All we have to do now is to pass the previously created Bridge to the `AutoForm`
 
 ```js
 import * as React from "react";
-import { AutoForm } from "@kie-tools/uniforms-patternfly/dist/esm";
+import { AutoForm } from "@kaoto-next/uniforms-patternfly/dist/esm";
 
 import schema from "./schema";
 
