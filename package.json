@@ -1,5 +1,5 @@
 {
-  "name": "@kaoto/uniforms-patternfly",
+  "name": "@kaoto-next/uniforms-patternfly",
   "version": "0.2.0",
   "description": "Patternfly forms for uniforms",
   "license": "Apache-2.0",
