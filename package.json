@@ -6,6 +6,9 @@
   "author": {
     "name": "The Kaoto Team"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "homepage": "https://github.com/KaotoIO/uniforms-patternfly/tree/main/packages/uniforms-patternfly",
   "repository": {
