@@ -1,0 +1,49 @@
+name: 📦 Build and publish npm Package
+# Event for the workflow
+on:
+  # 👇 Triggers the workflow on push events to the main branch
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  build:
+    if: github.repository == 'KaotoIO/uniforms-patternfly' && github.actor != 'renovate[bot]'
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Checkout all branches and tags
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@kaoto-next'
+          cache: 'yarn'
+
+      # Install dependencies
+      - run: yarn
+
+      # Run tests
+      - name: 🧪 Run tests
+        run: yarn run test
+
+      # Build packages
+      - name: Build @kaoto-next/uniforms-patternfly
+        run: yarn run build
+
+      # Version and publish
+      - name: "Version and publish"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor}}@users.noreply.github.com"
+
+          yarn publish
