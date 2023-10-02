@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.3.2...@kaoto-next/uniforms-patternfly@0.4.0) (2023-10-02)
+
+### Features
+
+* Expose wrapField function ([8c956e5](https://github.com/KaotoIO/uniforms-patternfly/commit/8c956e53b38ccdc912cde02f51bed8a1542dd650))
+
 ## [0.3.2](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.3.1...@kaoto-next/uniforms-patternfly@0.3.2) (2023-10-01)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
