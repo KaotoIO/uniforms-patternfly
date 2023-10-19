@@ -3761,11 +3761,11 @@ __metadata:
   linkType: hard
 
 "@types/simpl-schema@npm:^1.12.0":
-  version: 1.12.4
-  resolution: "@types/simpl-schema@npm:1.12.4"
+  version: 1.12.5
+  resolution: "@types/simpl-schema@npm:1.12.5"
   dependencies:
     "@types/meteor": "*"
-  checksum: 5c21254cfc974abba9a6ab6ac44be56c3dc1641b2b36c4f089211ace99f4e07429d7a4feec0642470656c229830cf291b0e704eedbe4d9e5b67fd690c5cd396a
+  checksum: 45bb6d4e780de126a2a65c7346612d0334c756abd9917ed425b383a67556ad00abc9b40cfd11ea9f5e0c65ab2ea6a99da16e80fe4b65533843b0f08c8930a1c1
   languageName: node
   linkType: hard
 
