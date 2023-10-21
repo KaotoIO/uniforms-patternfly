@@ -65,6 +65,7 @@ export default function wrapField(
   return (
     <FormGroup
       data-testid={'wrapper-field'}
+      data-fieldname={props.name}
       fieldId={id}
       label={label}
       isRequired={required}
