@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.4.4...@kaoto-next/uniforms-patternfly@0.5.0) (2023-10-21)
+
+### Features
+
+* **field:** Add field name to field wrapper ([0f00ed2](https://github.com/KaotoIO/uniforms-patternfly/commit/0f00ed2659105612133abd36afd5de6ce5880b30))
+
 ## [0.4.4](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.4.3...@kaoto-next/uniforms-patternfly@0.4.4) (2023-10-20)
 
 ### Bug Fixes
