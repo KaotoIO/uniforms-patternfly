@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.5.0...@kaoto-next/uniforms-patternfly@0.5.1) (2023-11-24)
+
+### Bug Fixes
+
+* **deps:** update dependency @types/invariant to v2.2.37 ([cba5c0b](https://github.com/KaotoIO/uniforms-patternfly/commit/cba5c0bdbfc9025646ce9a1d8a06266d7122e4c0))
+
 # [0.5.0](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.4.4...@kaoto-next/uniforms-patternfly@0.5.0) (2023-10-21)
 
 ### Features
