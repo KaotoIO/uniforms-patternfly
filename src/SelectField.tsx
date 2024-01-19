@@ -3,7 +3,7 @@ import SelectCheckboxField from './SelectCheckboxField';
 import { SelectCheckboxProps, SelectInputProps } from './SelectField.types';
 import SelectInputsField from './SelectInputsField';
 
-type SelectFieldProps = SelectCheckboxProps | SelectInputProps;
+export type SelectFieldProps = SelectCheckboxProps | SelectInputProps;
 
 function isSelectCheckboxProps(toBeDetermined: SelectFieldProps): toBeDetermined is SelectCheckboxProps {
   return (toBeDetermined as SelectInputProps).checkboxes === true;
