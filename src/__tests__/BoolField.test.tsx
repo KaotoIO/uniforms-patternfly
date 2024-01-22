@@ -90,6 +90,22 @@ test("<BoolField> - renders a input with correct value (specified)", () => {
   expect(screen.getByTestId("bool-field")).toHaveAttribute("checked");
 });
 
+test("<BoolField> - renders an input with correct hint popover description provided", () => {
+  const { getByTestId } = render(
+    usingUniformsContext(<BoolField name="x" description="BoolFieldDescription" />, { x: { type: Boolean } }),
+  );
+
+  expect(getByTestId("field-hint-button")).toBeInTheDocument();
+});
+
+test("<BoolField> - renders an input without hint popover when description not provided", () => {
+  const { queryByTestId } = render(
+    usingUniformsContext(<BoolField name="x" />, { x: { type: Boolean } }),
+  );
+
+  expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
+});
+
 test("<BoolField> - renders a input which correctly reacts on change", () => {
   const onChange = jest.fn();
 
