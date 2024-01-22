@@ -140,6 +140,22 @@ test('<TextField> - renders a help', () => {
   expect(screen.getByTestId('wrapper-field').querySelector('.pf-v5-c-form__helper-text')?.textContent).toBe('y');
 });
 
+test("<TextField> - renders an input with correct hint popover description provided", () => {
+  const { getByTestId } = render(
+    usingUniformsContext(<TextField name="x" description="TextFieldDescription" />, { x: { type: String } }),
+  );
+
+  expect(getByTestId("field-hint-button")).toBeInTheDocument();
+});
+
+test("<TextField> - renders an input with no hint popover when description is not provided", () => {
+  const { queryByTestId } = render(
+    usingUniformsContext(<TextField name="x" />, { x: { type: String } }),
+  );
+
+  expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
+});
+
 test('<TextField> - renders a initial value on date field (type = date)', () => {
   const date = '2000-04-04';
   render(

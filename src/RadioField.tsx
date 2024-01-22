@@ -21,7 +21,7 @@ import { Radio } from '@patternfly/react-core/dist/js/components/Radio';
 import { Fragment } from 'react';
 import { connectField, filterDOMProps, HTMLFieldProps } from 'uniforms';
 import { TransformFn } from './SelectField.types';
-import wrapField from './wrapField';
+import wrapField, { WrapFieldProps } from './wrapField';
 
 export type RadioFieldProps = HTMLFieldProps<
   string,
@@ -32,11 +32,12 @@ export type RadioFieldProps = HTMLFieldProps<
     onChange: (value: string) => void;
     value?: string;
     disabled?: boolean;
-  }
+  } & WrapFieldProps
 >;
 
 function RadioField(props: RadioFieldProps) {
   filterDOMProps.register('checkboxes', 'decimal');
+
   return wrapField(
     props,
     <div data-testid={'radio-field'} {...filterDOMProps(props)}>

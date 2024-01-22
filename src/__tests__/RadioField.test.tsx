@@ -91,6 +91,26 @@ test('<RadioField> - renders a set of checkboxes with correct name', () => {
   expect(screen.getByTestId('radio-field').getElementsByTagName('input')[1].getAttribute('name')).toBe('x');
 });
 
+test("<RadioField> - renders an input with correct hint popover description provided", () => {
+  const { getByTestId } = render(
+    usingUniformsContext(<RadioField name="x" options={['a', 'b']} description="NumFieldDescription" />, {
+      x: { type: String, options: ['a', 'b'] },
+    }),
+  );
+
+  expect(getByTestId("field-hint-button")).toBeInTheDocument();
+});
+
+test("<RadioField> - renders an input with no hint popover when description is not provided", () => {
+  const { queryByTestId } = render(
+    usingUniformsContext(<RadioField name="x" options={['a', 'b']} />, {
+      x: { type: String, options: ['a', 'b'] },
+    }),
+  );
+
+  expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
+});
+
 test('<RadioField> - renders a set of checkboxes with correct options', () => {
   render(
     usingUniformsContext(<RadioField name="x" options={['a', 'b']} />, {

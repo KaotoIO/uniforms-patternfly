@@ -21,11 +21,11 @@ import * as React from "react";
 import { useMemo } from "react";
 import { connectField, FieldProps } from "uniforms";
 import { TextInput, TextInputProps } from "@patternfly/react-core/dist/js/components/TextInput";
-import wrapField from "./wrapField";
+import wrapField, { WrapFieldProps } from "./wrapField";
 
 export type DateFieldProps = FieldProps<
   Date,
-  TextInputProps,
+  TextInputProps & WrapFieldProps,
   {
     inputRef?: React.RefObject<HTMLInputElement>;
     labelProps?: object;

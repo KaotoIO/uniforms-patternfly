@@ -247,3 +247,19 @@ test("<NumField> - renders a label", () => {
   const id = screen.getByTestId("num-field").getAttribute("id");
   expect(screen.getByTestId("wrapper-field").getElementsByTagName("label")[0].getAttribute("for")).toBe(id);
 });
+
+test("<NumField> - renders an input with correct hint popover description provided", () => {
+  const { getByTestId } = render(
+    usingUniformsContext(<NumField name="x" description="NumFieldDescription" />, { x: { type: Number } }),
+  );
+
+  expect(getByTestId("field-hint-button")).toBeInTheDocument();
+});
+
+test("<NumField> - renders an input with no hint popover when description is not provided", () => {
+  const { queryByTestId } = render(
+    usingUniformsContext(<NumField name="x" />, { x: { type: Number } }),
+  );
+
+  expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
+});
