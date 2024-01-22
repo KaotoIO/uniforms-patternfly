@@ -20,10 +20,12 @@
 import * as React from 'react';
 import { Checkbox, CheckboxProps } from '@patternfly/react-core/dist/js/components/Checkbox';
 import { Switch, SwitchProps } from '@patternfly/react-core/dist/js/components/Switch';
-import { connectField, FieldProps } from 'uniforms';
-import wrapField from './wrapField';
-import { FormHelperText, HelperText, HelperTextItem } from '@patternfly/react-core/dist/js';
+import { FormHelperText } from '@patternfly/react-core/dist/js/components/Form';
+import { HelperText, HelperTextItem } from '@patternfly/react-core/dist/js/components/HelperText';
 import { ExclamationCircleIcon } from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
+import { connectField, FieldProps } from 'uniforms';
+import FieldHintPopover from './FieldHintPopover';
+import wrapField, { WrapFieldProps } from './wrapField';
 
 enum ComponentType {
   checkbox = 'checkbox',
@@ -32,7 +34,7 @@ enum ComponentType {
 
 export type BoolFieldProps = FieldProps<
   boolean,
-  CheckboxProps & SwitchProps,
+  CheckboxProps & SwitchProps & WrapFieldProps,
   {
     appearance?: ComponentType;
     inputRef?: React.RefObject<Switch | Checkbox> & React.RefObject<HTMLInputElement>;
@@ -43,7 +45,7 @@ function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, 
   const Component = appearance === ComponentType.switch ? Switch : Checkbox;
   return wrapField(
     { id, ...props },
-    <>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
       {' '}
       <Component
         data-testid={'bool-field'}
@@ -55,6 +57,7 @@ function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, 
         ref={inputRef}
         label={label}
       />
+      <FieldHintPopover default={props.default} description={props.description} />
       <FormHelperText>
         <HelperText>
           <HelperTextItem icon={props.error === false && <ExclamationCircleIcon />} variant={props.error ? 'error' : 'default'}>
@@ -62,7 +65,7 @@ function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, 
           </HelperTextItem>
         </HelperText>
       </FormHelperText>
-    </>,
+    </div>,
   );
 }
 
