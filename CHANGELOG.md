@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.5.7...@kaoto-next/uniforms-patternfly@0.6.0) (2024-01-22)
+
+### Bug Fixes
+
+* Minor typos in tests ([e386f36](https://github.com/KaotoIO/uniforms-patternfly/commit/e386f36a1ac3592689d93ebeadb98b9393d37d2c))
+
+### Features
+
+* Add FieldHintPopover component ([853fbd6](https://github.com/KaotoIO/uniforms-patternfly/commit/853fbd6bfefeaa0df250b3556dab4a628dfd7b9b))
+* Add FieldHintPopover component to BoolField ([fbbd597](https://github.com/KaotoIO/uniforms-patternfly/commit/fbbd5973747674853d118713fe4484209ecd9dcf))
+
 ## [0.5.7](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.5.6...@kaoto-next/uniforms-patternfly@0.5.7) (2024-01-19)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
