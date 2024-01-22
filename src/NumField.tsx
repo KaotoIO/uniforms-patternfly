@@ -21,7 +21,7 @@ import * as React from "react";
 import { Ref } from "react";
 import { TextInput, TextInputProps } from "@patternfly/react-core/dist/js/components/TextInput";
 import { connectField } from "uniforms";
-import wrapField from "./wrapField";
+import wrapField, { WrapFieldProps } from "./wrapField";
 
 export type NumFieldProps = {
   id: string;
@@ -31,7 +31,8 @@ export type NumFieldProps = {
   disabled?: boolean;
   value?: number;
   error?: boolean;
-} & Omit<TextInputProps, "isDisabled">;
+} & Omit<TextInputProps, 'isDisabled'> &
+  WrapFieldProps;
 
 function NumField(props: NumFieldProps) {
   const onChange = (value: string, event: React.FormEvent<HTMLInputElement>) => {

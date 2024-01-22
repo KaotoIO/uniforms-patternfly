@@ -69,6 +69,22 @@ test("<DateField> - renders a input with correct label (specified)", () => {
   expect(screen.getByText("*")).toBeInTheDocument();
 });
 
+test("<DateField> - renders an input with correct hint popover description provided", () => {
+  const { getByTestId } = render(
+    usingUniformsContext(<DateField name="x" description="DateFieldDescription" />, { x: { type: Date } }),
+  );
+
+  expect(getByTestId("field-hint-button")).toBeInTheDocument();
+});
+
+test("<DateField> - renders an input with no hint popover when description is not provided", () => {
+  const { queryByTestId } = render(
+    usingUniformsContext(<DateField name="x" />, { x: { type: Date } }),
+  );
+
+  expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
+});
+
 test("<DateField> - renders a input with correct value (default)", () => {
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }));
 

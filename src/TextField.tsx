@@ -23,7 +23,7 @@ import { TextInput, TextInputProps } from '@patternfly/react-core/dist/js/compon
 import * as React from 'react';
 import { Ref, useCallback, useMemo } from 'react';
 import { connectField, filterDOMProps } from 'uniforms';
-import wrapField from './wrapField';
+import wrapField, { WrapFieldProps } from './wrapField';
 
 export type TextFieldProps = {
   id: string;
@@ -36,7 +36,8 @@ export type TextFieldProps = {
   errorMessage?: string;
   helperText?: string;
   field?: { format: string };
-} & Omit<TextInputProps, 'isDisabled'>;
+} & Omit<TextInputProps, 'isDisabled'> &
+  Omit<WrapFieldProps, 'ref'>;
 
 const timeRgx = /^([0-1]?[0-9]|2[0-3]):([0-5][0-9])(:[0-5][0-9])?/;
 

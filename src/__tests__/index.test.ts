@@ -29,6 +29,7 @@ it("exports everything", () => {
     DateField: expect.any(Function),
     ErrorField: expect.any(Function),
     ErrorsField: expect.any(Function),
+    FieldHintPopover: expect.any(Function),
     HiddenField: expect.any(Function),
     ListAddField: expect.any(Function),
     ListDelField: expect.any(Function),
