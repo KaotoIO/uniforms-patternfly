@@ -126,7 +126,7 @@ test('<TextField> - renders a label', () => {
   expect(screen.getByText('y')).toBeInTheDocument();
 });
 
-test('<TextField> - renders a label', () => {
+test('<TextField> - renders a label with required indicator', () => {
   render(usingUniformsContext(<TextField required={true} name="x" label="y" />, { x: { type: String } }));
 
   expect(screen.getByText('y')).toBeInTheDocument();
@@ -181,7 +181,7 @@ test('<TextField> - renders a disabled date field (type = date)', () => {
   expect(screen.getByTestId('text-field') as HTMLInputElement).toBeDisabled();
 });
 
-test('<TextField> - renders a input which correctly reacts on change (type = date)', () => {
+test('<TextField> - renders an input which correctly reacts on change (type = date)', () => {
   const onChange = jest.fn();
   const date = '2000-04-04';
 
@@ -201,7 +201,7 @@ test('<TextField> - renders a input which correctly reacts on change (type = dat
   expect(onChange).toHaveBeenLastCalledWith('x', date);
 });
 
-test('<TextField> - renders a input which correctly reacts on change (type = date - empty)', () => {
+test('<TextField> - renders an input which correctly reacts on change (type = date - empty)', () => {
   const onChange = jest.fn();
   const date = '';
 
@@ -246,7 +246,7 @@ test('<TextField> - renders a disabled date field (type = time)', () => {
   expect(screen.getByTestId('text-field')).toBeDisabled();
 });
 
-test('<TextField> - renders a input which correctly reacts on change (type = time)', () => {
+test('<TextField> - renders an input which correctly reacts on change (type = time)', () => {
   const onChange = jest.fn();
   const time = '10:10';
 
@@ -266,7 +266,7 @@ test('<TextField> - renders a input which correctly reacts on change (type = tim
   expect(onChange).toHaveBeenLastCalledWith('x', '10:10:00');
 });
 
-test('<TextField> - renders a input which correctly reacts on change (type = time - empty)', () => {
+test('<TextField> - renders an input which correctly reacts on change (type = time - empty)', () => {
   const onChange = jest.fn();
   const time = '';
 

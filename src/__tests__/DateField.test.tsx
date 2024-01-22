@@ -27,20 +27,20 @@ test("<DateField> - renders an input", () => {
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
 });
 
-test("<DateField> - renders a input with correct id (inherited)", () => {
+test("<DateField> - renders an input with correct id (inherited)", () => {
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
 });
 
-test("<DateField> - renders a input with correct id (specified)", () => {
+test("<DateField> - renders an input with correct id (specified)", () => {
   render(usingUniformsContext(<DateField name="x" id="y" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
   expect(screen.getByTestId("date-field").getAttribute("id")).toBe("y");
 });
 
-test("<DateField> - renders a input with correct name", () => {
+test("<DateField> - renders an input with correct name", () => {
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
@@ -54,14 +54,14 @@ test("<DateField> - renders an input with correct disabled state", () => {
   expect(screen.getByTestId("date-field") as HTMLInputElement).toBeDisabled();
 });
 
-test("<DateField> - renders a input with correct label (specified)", () => {
+test("<DateField> - renders an input with correct label (specified)", () => {
   render(usingUniformsContext(<DateField required={false} name="x" label="DateFieldLabel" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
   expect(screen.getByText("DateFieldLabel")).toBeInTheDocument();
 });
 
-test("<DateField> - renders a input with correct label (specified)", () => {
+test("<DateField> - renders an input with correct label (specified)", () => {
   render(usingUniformsContext(<DateField required={true} name="x" label="DateFieldLabel" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
@@ -85,14 +85,14 @@ test("<DateField> - renders an input with no hint popover when description is no
   expect(queryByTestId('field-hint-button')).not.toBeInTheDocument();
 });
 
-test("<DateField> - renders a input with correct value (default)", () => {
+test("<DateField> - renders an input with correct value (default)", () => {
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }));
 
   expect(screen.getByTestId("date-field")).toBeInTheDocument();
   expect((screen.getByTestId("date-field") as HTMLInputElement).value).toBe("");
 });
 
-test("<DateField> - renders a input with correct value (model)", () => {
+test("<DateField> - renders an input with correct value (model)", () => {
   const now = new Date();
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }, { model: { x: now } }));
 
@@ -101,7 +101,7 @@ test("<DateField> - renders a input with correct value (model)", () => {
   expect((screen.getByTestId("date-field") as HTMLInputElement).value).toEqual(`${stringfyDate}`);
 });
 
-test("<DateField> - renders a input which correctly reacts on change", () => {
+test("<DateField> - renders an input which correctly reacts on change", () => {
   const onChange = jest.fn();
 
   const now = "2000-04-04";
@@ -113,7 +113,7 @@ test("<DateField> - renders a input which correctly reacts on change", () => {
   expect(onChange).toHaveBeenLastCalledWith("x", new Date("2000-04-04T10:20:00.000Z"));
 });
 
-test("<DateField> - renders a input which correctly reacts on change (empty value)", () => {
+test("<DateField> - renders an input which correctly reacts on change (empty value)", () => {
   const onChange = jest.fn();
   const dateValue = new Date("2000-04-04");
 
@@ -125,7 +125,7 @@ test("<DateField> - renders a input which correctly reacts on change (empty valu
   expect(onChange).toHaveBeenLastCalledWith("x", undefined);
 });
 
-test("<DateField> - renders a input which correctly reacts on change (empty)", () => {
+test("<DateField> - renders an input which correctly reacts on change (empty)", () => {
   const onChange = jest.fn();
 
   render(usingUniformsContext(<DateField name="x" onChange={onChange} />, { x: { type: Date } }));
@@ -136,7 +136,7 @@ test("<DateField> - renders a input which correctly reacts on change (empty)", (
   expect(onChange).not.toHaveBeenCalled();
 });
 
-test("<DateField> - renders a input which correctly reacts on change (invalid)", () => {
+test("<DateField> - renders an input which correctly reacts on change (invalid)", () => {
   const onChange = jest.fn();
 
   const now = "10:00";
@@ -148,7 +148,7 @@ test("<DateField> - renders a input which correctly reacts on change (invalid)",
   expect(onChange).not.toHaveBeenCalled();
 });
 
-test("<DateField> - renders a input which correctly reacts on change (valid)", () => {
+test("<DateField> - renders an input which correctly reacts on change (valid)", () => {
   const onChange = jest.fn();
 
   const date = "2000-04-04";
@@ -163,7 +163,7 @@ test("<DateField> - renders a input which correctly reacts on change (valid)", (
   expect(onChange).toHaveBeenLastCalledWith("x", new Date(`${date}T${time}:00.000Z`));
 });
 
-test("<DateField> - renders a input which correctly reacts on change (year bigger than 9999)", () => {
+test("<DateField> - renders an input which correctly reacts on change (year bigger than 9999)", () => {
   const onChange = jest.fn();
 
   render(usingUniformsContext(<DateField name="x" />, { x: { type: Date } }, { onChange }));
