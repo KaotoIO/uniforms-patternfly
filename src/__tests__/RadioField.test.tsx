@@ -93,7 +93,7 @@ test('<RadioField> - renders a set of checkboxes with correct name', () => {
 
 test("<RadioField> - renders an input with correct hint popover description provided", () => {
   const { getByTestId } = render(
-    usingUniformsContext(<RadioField name="x" options={['a', 'b']} description="NumFieldDescription" />, {
+    usingUniformsContext(<RadioField name="x" options={['a', 'b']} description="RadioFieldDescription" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
