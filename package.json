@@ -37,12 +37,10 @@
     "publish": "lerna publish"
   },
   "dependencies": {
-    "@types/invariant": "^2.2.35",
     "invariant": "^2.2.4",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.70.0",
     "uniforms": "4.0.0-alpha.5"
   },
   "devDependencies": {
@@ -59,6 +57,7 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/invariant": "^2.2.35",
     "@types/jest": "^29.4.0",
     "@types/lodash": "^4.14.168",
     "@types/node": "^20.0.0",
@@ -72,6 +71,7 @@
     "jest": "^29.4.2",
     "jest-environment-jsdom": "^29.4.2",
     "rimraf": "^5.0.0",
+    "sass": "^1.70.0",
     "simpl-schema": "^3.4.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
