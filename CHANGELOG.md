@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.2...@kaoto-next/uniforms-patternfly@0.6.3) (2024-02-02)
+
+### Bug Fixes
+
+* Adding space between fields ([0558979](https://github.com/KaotoIO/uniforms-patternfly/commit/0558979d6adc4142e829593694898e832d8d6cda))
+
 ## [0.6.2](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.1...@kaoto-next/uniforms-patternfly@0.6.2) (2024-02-02)
 
 ### Bug Fixes
