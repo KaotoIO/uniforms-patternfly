@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.1...@kaoto-next/uniforms-patternfly@0.6.2) (2024-02-02)
+
+### Bug Fixes
+
+* **695:** Missing spacing between nested form fields ([bbcc976](https://github.com/KaotoIO/uniforms-patternfly/commit/bbcc976e1253f5e6989005f7c6238b60aea72d29))
+
 ## [0.6.1](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.0...@kaoto-next/uniforms-patternfly@0.6.1) (2024-01-23)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
