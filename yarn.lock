@@ -3585,8 +3585,8 @@ __metadata:
   linkType: hard
 
 "@testing-library/jest-dom@npm:^6.0.0":
-  version: 6.2.1
-  resolution: "@testing-library/jest-dom@npm:6.2.1"
+  version: 6.4.2
+  resolution: "@testing-library/jest-dom@npm:6.4.2"
   dependencies:
     "@adobe/css-tools": ^4.3.2
     "@babel/runtime": ^7.9.2
@@ -3613,7 +3613,7 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 36bb8c23fd102a572bb22e37933c5134c6b4737c9d1ca575d2abde64bd5ffbb5f571caa76c1d8ab0b384670fcc680353f1ef563a2d9a6d46d00c47b4eb38969b
+  checksum: 631aeadbf4e738080ae095242cf1a29a0b4ee2f09c8bdd0d3f00a923707da64c1617e088ba9a961d098481afabdc1d19149fb7ef98edf15132348eb222f345ae
   languageName: node
   linkType: hard
 
