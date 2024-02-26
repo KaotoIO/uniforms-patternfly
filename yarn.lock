@@ -9478,12 +9478,12 @@ __metadata:
   linkType: hard
 
 "simpl-schema@npm:^3.4.1":
-  version: 3.4.1
-  resolution: "simpl-schema@npm:3.4.1"
+  version: 3.4.6
+  resolution: "simpl-schema@npm:3.4.6"
   dependencies:
     clone: ^2.1.2
     mongo-object: ^3.0.1
-  checksum: 877f29104474624336983b6e423cb2f207cd3490919c7656e90cf5806e3bebbf87dbf190f6dc77827ae03efaf4d8651fa7498061c2e6c84de6b15e709b88706f
+  checksum: fd57918c4750f7fda91ea93b7d090c718f65628d3522d2db45a11bb1fa1824f9f700a25423c522aace747cb732aff83c584d28d2a786ed5056c360bd3f31c2ae
   languageName: node
   linkType: hard
 
