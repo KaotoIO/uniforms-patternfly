@@ -20,7 +20,7 @@
 import { FormGroup, FormGroupProps } from '@patternfly/react-core/dist/js/components/Form';
 import * as React from 'react';
 import { FilterDOMPropsKeys, filterDOMProps } from 'uniforms';
-import FieldHintPopover from './FieldHintPopover';
+import FielDetailsPopover from './FieldDetailsPopover';
 
 declare module 'uniforms' {
   interface FilterDOMProps {
@@ -58,6 +58,7 @@ export type WrapFieldProps = {
   help?: string;
   showInlineError?: boolean;
   description?: React.ReactNode;
+  deprecated?: boolean;
 } & Omit<FormGroupProps, 'onChange' | 'fieldId'>;
 
 export default function wrapField(
@@ -72,6 +73,7 @@ export default function wrapField(
     help,
     required,
     description,
+    deprecated,
     ...props
   }: WrapFieldProps,
   children: React.ReactNode,
@@ -84,7 +86,7 @@ export default function wrapField(
       label={label}
       isRequired={required}
       type={type}
-      labelIcon={description ? <FieldHintPopover description={description} /> : undefined}
+      labelIcon={<FielDetailsPopover description={description} deprecated={deprecated} />}
       {...filterDOMProps(props)}
     >
       {children}
