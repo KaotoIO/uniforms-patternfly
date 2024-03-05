@@ -24,7 +24,7 @@ import { FormHelperText } from '@patternfly/react-core/dist/js/components/Form';
 import { HelperText, HelperTextItem } from '@patternfly/react-core/dist/js/components/HelperText';
 import { ExclamationCircleIcon } from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
 import { connectField, FieldProps } from 'uniforms';
-import FieldHintPopover from './FieldHintPopover';
+import FieldDetailsPopover from './FieldDetailsPopover';
 import wrapField, { WrapFieldProps } from './wrapField';
 
 enum ComponentType {
@@ -41,7 +41,7 @@ export type BoolFieldProps = FieldProps<
   }
 >;
 
-function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, value, ...props }: BoolFieldProps) {
+function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, value, deprecated, ...props }: BoolFieldProps) {
   const Component = appearance === ComponentType.switch ? Switch : Checkbox;
   return wrapField(
     { id, ...props },
@@ -57,7 +57,7 @@ function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, 
         ref={inputRef}
         label={label}
       />
-      <FieldHintPopover default={props.default} description={props.description} />
+      <FieldDetailsPopover default={props.default} description={props.description} deprecated={deprecated}/>
       <FormHelperText>
         <HelperText>
           <HelperTextItem icon={props.error === false && <ExclamationCircleIcon />} variant={props.error ? 'error' : 'default'}>

@@ -27,6 +27,8 @@ export { default as ErrorField } from "./ErrorField";
 export { default as ErrorsField } from "./ErrorsField";
 export { default as HiddenField } from "./HiddenField";
 export { default as FieldHintPopover } from "./FieldHintPopover";
+export { default as FieldDeprecatedPopover } from "./FieldDeprecatedPopover";
+export { default as FieldDetailsPopover } from "./FieldDetailsPopover";
 export { default as ListAddField } from "./ListAddField";
 export { default as ListDelField } from "./ListDelField";
 export { default as ListField } from "./ListField";
