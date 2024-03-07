@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.3...@kaoto-next/uniforms-patternfly@0.6.4) (2024-03-07)
+
+### Bug Fixes
+
+* Mark deprecated configuration options ([2230141](https://github.com/KaotoIO/uniforms-patternfly/commit/2230141a21992ec0cb6e7d699d55936ffed73cb5))
+
 ## [0.6.3](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.2...@kaoto-next/uniforms-patternfly@0.6.3) (2024-02-02)
 
 ### Bug Fixes
