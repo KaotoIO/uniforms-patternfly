@@ -59,6 +59,7 @@ export type WrapFieldProps = {
   showInlineError?: boolean;
   description?: React.ReactNode;
   deprecated?: boolean;
+  field: unknown;
 } & Omit<FormGroupProps, 'onChange' | 'fieldId'>;
 
 export default function wrapField(
@@ -78,6 +79,10 @@ export default function wrapField(
   }: WrapFieldProps,
   children: React.ReactNode,
 ) {
+  let defaultValue;
+  if (typeof props.field === 'object' && props.field !== null && 'default' in props.field) {
+    defaultValue = props.field.default;
+  }
   return (
     <FormGroup
       data-testid="wrapper-field"
@@ -86,7 +91,7 @@ export default function wrapField(
       label={label}
       isRequired={required}
       type={type}
-      labelIcon={<FielDetailsPopover description={description} deprecated={deprecated} />}
+      labelIcon={<FielDetailsPopover default={defaultValue} description={description} deprecated={deprecated} />}
       {...filterDOMProps(props)}
     >
       {children}
