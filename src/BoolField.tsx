@@ -43,6 +43,10 @@ export type BoolFieldProps = FieldProps<
 
 function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, value, deprecated, ...props }: BoolFieldProps) {
   const Component = appearance === ComponentType.switch ? Switch : Checkbox;
+  let defaultValue;
+  if (typeof props.field === 'object' && props.field !== null && 'default' in props.field && typeof props.field.default === 'boolean') {
+    defaultValue = props.field.default.toString();
+  }
   return wrapField(
     { id, ...props },
     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -57,7 +61,7 @@ function BoolField({ appearance, disabled, id, inputRef, label, name, onChange, 
         ref={inputRef}
         label={label}
       />
-      <FieldDetailsPopover default={props.default} description={props.description} deprecated={deprecated}/>
+      <FieldDetailsPopover default={defaultValue} description={props.description} deprecated={deprecated}/>
       <FormHelperText>
         <HelperText>
           <HelperTextItem icon={props.error === false && <ExclamationCircleIcon />} variant={props.error ? 'error' : 'default'}>

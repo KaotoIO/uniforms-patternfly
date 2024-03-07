@@ -8,9 +8,8 @@ interface FieldDetailsPopoverProps {
   description?: PopoverProps['bodyContent'];
   deprecated?: boolean;
 }
-
 /**
- * Returns a label tooltip element for the form or undefined if the field has no description
+ * Returns label description and deprecation icons with tooltip for the form or empty element if the field is not deprecated and has no description
  * @returns
  * @param props
  */
