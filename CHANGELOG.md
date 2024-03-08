@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.5...@kaoto-next/uniforms-patternfly@0.6.6) (2024-03-08)
+
+### Bug Fixes
+
+* Making field prop optional ([0a75e73](https://github.com/KaotoIO/uniforms-patternfly/commit/0a75e737062330be6b8153f2a83bda83a00a99e9))
+
 ## [0.6.5](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.4...@kaoto-next/uniforms-patternfly@0.6.5) (2024-03-08)
 
 ### Bug Fixes
