@@ -59,7 +59,7 @@ export type WrapFieldProps = {
   showInlineError?: boolean;
   description?: React.ReactNode;
   deprecated?: boolean;
-  field: unknown;
+  field?: unknown;
 } & Omit<FormGroupProps, 'onChange' | 'fieldId'>;
 
 export default function wrapField(
