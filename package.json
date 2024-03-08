@@ -1,6 +1,6 @@
 {
   "name": "@kaoto-next/uniforms-patternfly",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Patternfly forms for uniforms",
   "license": "Apache-2.0",
   "author": {
