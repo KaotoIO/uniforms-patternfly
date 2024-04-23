@@ -30,6 +30,7 @@ export type LongTextFieldProps = HTMLFieldProps<
     onChange: (value: string, event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     value?: string;
     prefix?: string;
+    autoResize?: boolean;
   }
 >;
 
@@ -42,6 +43,8 @@ function LongTextField({
   onChange,
   placeholder,
   value,
+  rows,
+  autoResize,
   ...props
 }: LongTextFieldProps) {
   return wrapField(
@@ -57,6 +60,8 @@ function LongTextField({
       ref={inputRef}
       resizeOrientation="vertical"
       value={value ?? ""}
+      rows={rows}
+      autoResize={autoResize}
     />
   );
 }
