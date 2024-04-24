@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.10](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.9...@kaoto-next/uniforms-patternfly@0.6.10) (2024-04-24)
+
+### Bug Fixes
+
+* Added Rows and AutoResize props to LongTextField ([36bdbc5](https://github.com/KaotoIO/uniforms-patternfly/commit/36bdbc5fd347c75c803b785cad51a6e5ee72f68f))
+
 ## [0.6.9](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.8...@kaoto-next/uniforms-patternfly@0.6.9) (2024-03-20)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
