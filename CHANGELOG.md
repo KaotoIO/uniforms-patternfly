@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.11](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.10...@kaoto-next/uniforms-patternfly@0.6.11) (2024-06-03)
+
+**Note:** Version bump only for package @kaoto-next/uniforms-patternfly
+
 ## [0.6.10](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.9...@kaoto-next/uniforms-patternfly@0.6.10) (2024-04-24)
 
 ### Bug Fixes
