@@ -3944,11 +3944,11 @@ __metadata:
   linkType: hard
 
 "@types/simpl-schema@npm:^1.12.0":
-  version: 1.12.7
-  resolution: "@types/simpl-schema@npm:1.12.7"
+  version: 1.12.8
+  resolution: "@types/simpl-schema@npm:1.12.8"
   dependencies:
     "@types/meteor": "*"
-  checksum: 693de98a722a98a2729aa6a36a264d16b56f2bc926be2d0b0b797e45a98d6ba1ba159d965f0eaac0d094172e5d846e04a43f633abe77395ead3e6244f2e04b9a
+  checksum: aa80318008247aa36587c6cece887858116dd4ffc8802c9ccd38537ee6abeb90d91397d9beab0fe67137f9a5eacfcd43607d931471e0dd900edba5cf2713c17c
   languageName: node
   linkType: hard
 
