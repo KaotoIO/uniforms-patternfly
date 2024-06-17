@@ -17,18 +17,19 @@
  * under the License.
  */
 
-import * as React from "react";
-import { Children, cloneElement, isValidElement, ReactNode } from "react";
-import { Tooltip } from "@patternfly/react-core/dist/js/components/Tooltip";
 import { Split, SplitItem } from "@patternfly/react-core/dist/js/layouts/Split";
-import { OutlinedQuestionCircleIcon } from "@patternfly/react-icons/dist/js/icons/outlined-question-circle-icon";
-import { connectField, filterDOMProps, HTMLFieldProps } from "uniforms";
-import ListItemField from "./ListItemField";
+import * as React from "react";
+import { Children, ReactNode, cloneElement, isValidElement } from "react";
+import { HTMLFieldProps, connectField, filterDOMProps } from "uniforms";
+import FieldDetailsPopover from "./FieldDetailsPopover";
 import ListAddField from "./ListAddField";
+import ListItemField from "./ListItemField";
+import { WrapFieldProps } from "./wrapField";
 
 export type ListFieldProps = HTMLFieldProps<
   unknown[],
   HTMLDivElement,
+  WrapFieldProps &
   {
     children?: ReactNode;
     info?: string;
@@ -59,6 +60,8 @@ function ListField({
   name,
   value,
   showInlineError,
+  deprecated,
+  defaultValue,
   ...props
 }: ListFieldProps) {
   return (
@@ -68,13 +71,8 @@ function ListField({
           {label && (
             <label>
               {label}
-              {!!info && (
-                <span>
-                  &nbsp;
-                  <Tooltip content={info}>
-                    <OutlinedQuestionCircleIcon />
-                  </Tooltip>
-                </span>
+              {props.description && (
+                <FieldDetailsPopover default={defaultValue} description={props.description} deprecated={deprecated} />
               )}
             </label>
           )}
