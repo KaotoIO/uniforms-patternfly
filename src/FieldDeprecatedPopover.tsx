@@ -23,6 +23,7 @@ const FieldDeprecatedPopover: FunctionComponent<FieldDeprecatedPopoverProps> = (
       bodyContent="Deprecated"
       data-testid="property-deprecated-popover"
       className="pf-v5-u-my-0"
+      triggerAction="hover"
     >
       <Button
         variant="plain"
