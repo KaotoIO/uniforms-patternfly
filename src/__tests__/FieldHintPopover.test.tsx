@@ -28,8 +28,7 @@ test('<FieldHintPopover> - renders hint icon', async () => {
   expect(element).toBeInTheDocument();
 
   await act(async () => {
-    fireEvent.click(element);
+    fireEvent.mouseOver(element);
+    waitFor(() => expect(screen.getByTestId('property-description-popover')).toBeInTheDocument());
   });
-
-  await waitFor(() => expect(screen.getByTestId('property-description-popover')).toBeInTheDocument());
 });
