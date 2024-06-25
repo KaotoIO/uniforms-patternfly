@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.14](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.13...@kaoto-next/uniforms-patternfly@0.6.14) (2024-06-25)
+
+### Bug Fixes
+
+* **1081:** open help message on hover ([e828ee6](https://github.com/KaotoIO/uniforms-patternfly/commit/e828ee6e0b4f7a1b97c12dcc27f17cf93b224d43))
+
 ## [0.6.13](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.6.12...@kaoto-next/uniforms-patternfly@0.6.13) (2024-06-24)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
