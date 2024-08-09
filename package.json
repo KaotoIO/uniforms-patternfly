@@ -39,7 +39,7 @@
   "dependencies": {
     "invariant": "^2.2.4",
     "lodash.clonedeep": "^4.5.0",
-    "uniforms": "4.0.0-alpha.5"
+    "uniforms": "4.0.0-alpha.6"
   },
   "peerDependencies": {
     "@patternfly/react-core": "^5.0.0",
