@@ -38,14 +38,14 @@
   },
   "dependencies": {
     "invariant": "^2.2.4",
-    "lodash.clonedeep": "^4.5.0",
-    "uniforms": "4.0.0-alpha.5"
+    "lodash.clonedeep": "^4.5.0"
   },
   "peerDependencies": {
     "@patternfly/react-core": "^5.0.0",
     "@patternfly/react-icons": "^5.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "uniforms": "4.0.0-alpha.5"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -80,6 +80,7 @@
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.2",
+    "uniforms": "4.0.0-alpha.5",
     "uniforms-bridge-simple-schema-2": "4.0.0-alpha.5"
   }
 }
