@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.7...@kaoto-next/uniforms-patternfly@0.7.8) (2024-10-08)
+
+### Bug Fixes
+
+* Disable focus trap in field hint popover ([534ac10](https://github.com/KaotoIO/uniforms-patternfly/commit/534ac10d20c20e08372ab89e190bf2aebf4a6fed))
+
 ## [0.7.7](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.6...@kaoto-next/uniforms-patternfly@0.7.7) (2024-10-01)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
