@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.9](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.8...@kaoto-next/uniforms-patternfly@0.7.9) (2024-10-08)
+
+### Bug Fixes
+
+* Add error helper to NumField component ([65c14c3](https://github.com/KaotoIO/uniforms-patternfly/commit/65c14c3fd2b33fbebd9ccf44da9024f12b7aba8c))
+
 ## [0.7.8](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.7...@kaoto-next/uniforms-patternfly@0.7.8) (2024-10-08)
 
 ### Bug Fixes
