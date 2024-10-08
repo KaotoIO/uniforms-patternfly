@@ -239,6 +239,13 @@ test("<NumField> - renders a label", () => {
   expect(screen.getByTestId("wrapper-field").getElementsByTagName("label")[0].getAttribute("for")).toBe(id);
 });
 
+test('<NumField> - renders a help', () => {
+  render(usingUniformsContext(<NumField required={false} name="x" helperText="y" />, { x: { type: Number } }));
+
+  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v5-c-form__helper-text')).toBeInTheDocument();
+  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v5-c-form__helper-text')?.textContent).toBe('y');
+});
+
 test("<NumField> - renders a label", () => {
   render(usingUniformsContext(<NumField required={true} name="x" label="y" />, { x: { type: Number } }));
 
