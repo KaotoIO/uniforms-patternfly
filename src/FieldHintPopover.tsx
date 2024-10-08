@@ -26,6 +26,7 @@ const FieldHintPopover: FunctionComponent<FieldHintPopoverProps> = (props) => {
       footerContent={<Text component={TextVariants.small}>Default: {props.default ?? <i>No default value</i>}</Text>}
       className="pf-v5-u-my-0"
       triggerAction="hover"
+      withFocusTrap={false}
     >
       <Button
         variant="plain"
