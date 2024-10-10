@@ -48,7 +48,7 @@ function ListAddField({ disabled = false, name, value, ...props }: ListAddFieldP
       style={{ paddingLeft: "0", paddingRight: "0" }}
       disabled={!limitNotReached}
       onClick={() => {
-        !disabled && limitNotReached && parent.onChange((parent.value ?? []).concat([cloneDeep(value)]));
+        !disabled && limitNotReached && parent.onChange(([cloneDeep(value)]).concat(parent.value ?? []));
       }}
       {...filterDOMProps(props)}
       label='THIS IS A LABEL'
