@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.12](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.11...@kaoto-next/uniforms-patternfly@0.7.12) (2024-10-14)
+
+### Reverts
+
+* Revert "Add new array elements at the top" ([d1250a9](https://github.com/KaotoIO/uniforms-patternfly/commit/d1250a9b1c34039da65a8b98aa53795e46139b74))
+
 ## [0.7.11](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.10...@kaoto-next/uniforms-patternfly@0.7.11) (2024-10-10)
 
 **Note:** Version bump only for package @kaoto-next/uniforms-patternfly
