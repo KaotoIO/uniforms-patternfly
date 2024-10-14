@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.13](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.12...@kaoto-next/uniforms-patternfly@0.7.13) (2024-10-14)
+
+### Bug Fixes
+
+* **Form:** Form not being rendered ([c4c6d5c](https://github.com/KaotoIO/uniforms-patternfly/commit/c4c6d5c5263c1775482b4d8536cf086e8aa5b009))
+
 ## [0.7.12](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.11...@kaoto-next/uniforms-patternfly@0.7.12) (2024-10-14)
 
 ### Reverts
