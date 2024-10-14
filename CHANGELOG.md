@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.14](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.13...@kaoto-next/uniforms-patternfly@0.7.14) (2024-10-14)
+
+### Bug Fixes
+
+* **Form:** Remove last usages of default props ([af8d39f](https://github.com/KaotoIO/uniforms-patternfly/commit/af8d39fc99f588b909979c17327eb601acc0f7cc))
+
 ## [0.7.13](https://github.com/KaotoIO/uniforms-patternfly/compare/@kaoto-next/uniforms-patternfly@0.7.12...@kaoto-next/uniforms-patternfly@0.7.13) (2024-10-14)
 
 ### Bug Fixes
