@@ -4427,11 +4427,11 @@ __metadata:
   linkType: hard
 
 "@types/simpl-schema@npm:^1.12.0":
-  version: 1.12.8
-  resolution: "@types/simpl-schema@npm:1.12.8"
+  version: 1.12.9
+  resolution: "@types/simpl-schema@npm:1.12.9"
   dependencies:
     "@types/meteor": "*"
-  checksum: aa80318008247aa36587c6cece887858116dd4ffc8802c9ccd38537ee6abeb90d91397d9beab0fe67137f9a5eacfcd43607d931471e0dd900edba5cf2713c17c
+  checksum: a77822b21a4b26ba27f7bc11253498e90ea0723e9587f022f36c03914e2ccc875acf9fcdda118f43c9162384e1ddcfe294ac3f43a0b370b379893c6f465ee08b
   languageName: node
   linkType: hard
 
