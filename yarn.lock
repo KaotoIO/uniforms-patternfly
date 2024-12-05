@@ -2936,14 +2936,14 @@ __metadata:
     ts-jest: ^29.1.1
     ts-node: ^10.9.1
     typescript: ^5.0.2
-    uniforms: 4.0.0-alpha.5
+    uniforms: 4.0.0-beta.4
     uniforms-bridge-simple-schema-2: 4.0.0-alpha.5
   peerDependencies:
     "@patternfly/react-core": ^5.0.0
     "@patternfly/react-icons": ^5.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
-    uniforms: 4.0.0-alpha.5
+    uniforms: 4.0.0-beta.4
   languageName: unknown
   linkType: soft
 
@@ -10291,6 +10291,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.8.0":
+  version: 2.8.0
+  resolution: "tslib@npm:2.8.0"
+  checksum: de852ecd81adfdb4870927e250763345f07dc13fe7f395ce261424966bb122a0992ad844c3ec875c9e63e72afe2220a150712984e44dfd1a8a7e538a064e3d46
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.11.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -10466,7 +10473,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uniforms@npm:4.0.0-alpha.5, uniforms@npm:^4.0.0-alpha.5":
+"uniforms@npm:4.0.0-beta.4":
+  version: 4.0.0-beta.4
+  resolution: "uniforms@npm:4.0.0-beta.4"
+  dependencies:
+    invariant: ^2.0.0
+    lodash: ^4.0.0
+    tslib: 2.8.0
+  peerDependencies:
+    react: ^18.0.0 || ^17.0.0 || ^16.8.0
+  checksum: 2e0c24a2c10aaaa4da9dd9a33507cd90ed57c0d21af17b1afd75dc8999165e73a8b60c5b28270ed82654e9f7c7e84b2cf0778ffb0f61de0b8352c871c9d47be5
+  languageName: node
+  linkType: hard
+
+"uniforms@npm:^4.0.0-alpha.5":
   version: 4.0.0-alpha.5
   resolution: "uniforms@npm:4.0.0-alpha.5"
   dependencies:
