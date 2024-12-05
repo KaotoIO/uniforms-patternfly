@@ -2937,7 +2937,7 @@ __metadata:
     ts-node: ^10.9.1
     typescript: ^5.0.2
     uniforms: 4.0.0-alpha.5
-    uniforms-bridge-simple-schema-2: 4.0.0-alpha.5
+    uniforms-bridge-simple-schema-2: 4.0.0-beta.4
   peerDependencies:
     "@patternfly/react-core": ^5.0.0
     "@patternfly/react-icons": ^5.0.0
@@ -7787,13 +7787,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash._reinterpolate@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "lodash._reinterpolate@npm:3.0.0"
-  checksum: 06d2d5f33169604fa5e9f27b6067ed9fb85d51a84202a656901e5ffb63b426781a601508466f039c720af111b0c685d12f1a5c14ff8df5d5f27e491e562784b2
-  languageName: node
-  linkType: hard
-
 "lodash.clonedeep@npm:^4.5.0":
   version: 4.5.0
   resolution: "lodash.clonedeep@npm:4.5.0"
@@ -7812,25 +7805,6 @@ __metadata:
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
   checksum: 9ff3942feeccffa4f1fafa88d32f0d24fdc62fd15ded5a74a5f950ff5f0c6f61916157246744c620173dddf38d37095a92327d5fd3861e2063e736a5c207d089
-  languageName: node
-  linkType: hard
-
-"lodash.template@npm:^4.5.0":
-  version: 4.5.0
-  resolution: "lodash.template@npm:4.5.0"
-  dependencies:
-    lodash._reinterpolate: ^3.0.0
-    lodash.templatesettings: ^4.0.0
-  checksum: ca64e5f07b6646c9d3dbc0fe3aaa995cb227c4918abd1cef7a9024cd9c924f2fa389a0ec4296aa6634667e029bc81d4bbdb8efbfde11df76d66085e6c529b450
-  languageName: node
-  linkType: hard
-
-"lodash.templatesettings@npm:^4.0.0":
-  version: 4.2.0
-  resolution: "lodash.templatesettings@npm:4.2.0"
-  dependencies:
-    lodash._reinterpolate: ^3.0.0
-  checksum: 863e025478b092997e11a04e9d9e735875eeff1ffcd6c61742aa8272e3c2cddc89ce795eb9726c4e74cef5991f722897ff37df7738a125895f23fc7d12a7bb59
   languageName: node
   linkType: hard
 
@@ -8006,15 +7980,6 @@ __metadata:
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
   checksum: 7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
-  languageName: node
-  linkType: hard
-
-"message-box@npm:^0.2.7":
-  version: 0.2.7
-  resolution: "message-box@npm:0.2.7"
-  dependencies:
-    lodash.template: ^4.5.0
-  checksum: 97a6dd422959232d7ae3411b084b426a51dfb52e52729929b84665fc8c2274b484dd971a9b629aae11ada8bb3822be41913130c18d58309cc962855de0113e32
   languageName: node
   linkType: hard
 
@@ -8242,13 +8207,6 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
-  languageName: node
-  linkType: hard
-
-"mongo-object@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "mongo-object@npm:0.1.4"
-  checksum: 7d5c9634325be1d05cbf57e21b89962e3aa633724359c1e43ef8aa821e514290bb412fabc383e6f4c63bfde6d5e4860215bfe2f87e971bd8ddd7476f439e32de
   languageName: node
   linkType: hard
 
@@ -9697,17 +9655,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simpl-schema@npm:^1.0.0 || ^0.0.4":
-  version: 1.13.1
-  resolution: "simpl-schema@npm:1.13.1"
-  dependencies:
-    clone: ^2.1.2
-    message-box: ^0.2.7
-    mongo-object: ^0.1.4
-  checksum: 7f25b2233a3b84ee616e097ae70beb76c8e3bbfef9b80803ec0f39206e0dbb356b6a36ce8a160d5830d6378e80a8f4998b51d1a0126df9e69c699bcbc3a5ed48
-  languageName: node
-  linkType: hard
-
 "simpl-schema@npm:^3.4.1":
   version: 3.4.6
   resolution: "simpl-schema@npm:3.4.6"
@@ -10291,6 +10238,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.8.0":
+  version: 2.8.0
+  resolution: "tslib@npm:2.8.0"
+  checksum: de852ecd81adfdb4870927e250763345f07dc13fe7f395ce261424966bb122a0992ad844c3ec875c9e63e72afe2220a150712984e44dfd1a8a7e538a064e3d46
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.11.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -10453,20 +10407,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uniforms-bridge-simple-schema-2@npm:4.0.0-alpha.5":
-  version: 4.0.0-alpha.5
-  resolution: "uniforms-bridge-simple-schema-2@npm:4.0.0-alpha.5"
+"uniforms-bridge-simple-schema-2@npm:4.0.0-beta.4":
+  version: 4.0.0-beta.4
+  resolution: "uniforms-bridge-simple-schema-2@npm:4.0.0-beta.4"
   dependencies:
     invariant: ^2.0.0
     lodash: ^4.0.0
+    tslib: 2.8.0
+  peerDependencies:
     simpl-schema: ^1.0.0 || ^0.0.4
-    tslib: ^2.2.0
-    uniforms: ^4.0.0-alpha.5
-  checksum: fd2c60997cb4b2478d7992d03fa0494dbfdba0924790ec4d83eeb8fc9e188092f663f6636f4757db15b7c1e40589b39d1651e9472f9611688e43c1fd88badeee
+    uniforms: 4.0.0-beta.4
+  checksum: 105ca3d93821dcda7eb9945732b09058a90d00c3857cf82961119a1ed35e0a474bd5adc4896bfdcc56071af87351aa10221ea888b91e654e023fc17a33a0813d
   languageName: node
   linkType: hard
 
-"uniforms@npm:4.0.0-alpha.5, uniforms@npm:^4.0.0-alpha.5":
+"uniforms@npm:4.0.0-alpha.5":
   version: 4.0.0-alpha.5
   resolution: "uniforms@npm:4.0.0-alpha.5"
   dependencies:
