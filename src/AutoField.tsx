@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import { createAutoField } from "uniforms";
 import invariant from "invariant";
+import { createAutoField } from "uniforms";
 import BoolField from "./BoolField";
 import DateField from "./DateField";
 import ListField from "./ListField";

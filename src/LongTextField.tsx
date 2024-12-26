@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import { TextArea } from "@patternfly/react-core/dist/js/components/TextArea";
-import * as React from "react";
+import { TextArea } from "@patternfly/react-core";
+import { ChangeEvent, RefObject } from "react";
 import { connectField, HTMLFieldProps } from "uniforms";
 import wrapField from "./wrapField";
 
@@ -26,8 +26,8 @@ export type LongTextFieldProps = HTMLFieldProps<
   string,
   HTMLDivElement,
   {
-    inputRef?: React.RefObject<HTMLTextAreaElement>;
-    onChange: (value: string, event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    inputRef?: RefObject<HTMLTextAreaElement>;
+    onChange: (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void;
     value?: string;
     prefix?: string;
     autoResize?: boolean;

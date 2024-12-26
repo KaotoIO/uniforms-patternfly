@@ -17,10 +17,9 @@
  * under the License.
  */
 
-import * as React from "react";
+import { ButtonProps, Button } from "@patternfly/react-core";
+import { MinusCircleIcon } from "@patternfly/react-icons";
 import { ReactNode } from "react";
-import { Button, ButtonProps } from "@patternfly/react-core/dist/js/components/Button";
-import { MinusCircleIcon } from "@patternfly/react-icons/dist/js/icons/minus-circle-icon";
 import { connectField, FieldProps, filterDOMProps, joinName, useField } from "uniforms";
 
 export type ListDelFieldProps = FieldProps<unknown, ButtonProps, { icon?: ReactNode }>;
@@ -34,7 +33,7 @@ function ListDelField({ name, disabled, ...props }: ListDelFieldProps) {
   const limitNotReached = !disabled && !(parent.minCount! >= parent.value!.length);
 
   return (
-    <Button
+    <Button icon={<MinusCircleIcon color="#cc0000" />}
       data-testid={"list-del-field"}
       disabled={!limitNotReached || disabled}
       variant="plain"
@@ -46,9 +45,7 @@ function ListDelField({ name, disabled, ...props }: ListDelFieldProps) {
       }}
       {...filterDOMProps(props)}
       label='THIS IS A LABEL'
-    >
-      <MinusCircleIcon color="#cc0000" />
-    </Button>
+     />
   );
 }
 
