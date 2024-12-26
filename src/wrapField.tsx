@@ -17,8 +17,8 @@
  * under the License.
  */
 
-import { FormGroup, FormGroupProps } from '@patternfly/react-core/dist/js/components/Form';
-import * as React from 'react';
+import { FormGroup, FormGroupProps } from '@patternfly/react-core';
+import { ReactNode } from 'react';
 import { FilterDOMPropsKeys, filterDOMProps } from 'uniforms';
 import FielDetailsPopover from './FieldDetailsPopover';
 
@@ -57,7 +57,7 @@ export type WrapFieldProps = {
   errorMessage?: string;
   help?: string;
   showInlineError?: boolean;
-  description?: React.ReactNode;
+  description?: ReactNode;
   deprecated?: boolean;
   field?: unknown;
 } & Omit<FormGroupProps, 'onChange' | 'fieldId'>;
@@ -77,7 +77,7 @@ export default function wrapField(
     deprecated,
     ...props
   }: WrapFieldProps,
-  children: React.ReactNode,
+  children: ReactNode,
 ) {
   let defaultValue;
   if (typeof props.field === 'object' && props.field !== null && 'default' in props.field) {
@@ -91,7 +91,7 @@ export default function wrapField(
       label={label}
       isRequired={required}
       type={type}
-      labelIcon={<FielDetailsPopover default={defaultValue} description={description} deprecated={deprecated} />}
+      labelHelp={<FielDetailsPopover default={defaultValue} description={description} deprecated={deprecated} />}
       {...filterDOMProps(props)}
     >
       {children}

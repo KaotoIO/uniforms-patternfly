@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import * as React from "react";
 import { ReactNode } from "react";
 import { connectField } from "uniforms";
 import AutoField from "./AutoField";
 import ListDelField from "./ListDelField";
+import "./ListItemField.scss";
 
 export type ListItemFieldProps = {
   children?: ReactNode;
@@ -31,14 +31,10 @@ export type ListItemFieldProps = {
 function ListItemField({ children = <AutoField label={null} name={""} /> }: ListItemFieldProps) {
   return (
     <div
-      data-testid={"list-item-field"}
-      style={{
-        marginBottom: "1rem",
-        display: "flex",
-        justifyContent: "space-between",
-      }}
+      data-testid="list-item-field"
+      className="list-item-field-wrapper"
     >
-      <div style={{ width: "100%", marginRight: "10px" }}>{children}</div>
+      <div className="list-item-field-children-wrapper">{children}</div>
       <div>
         <ListDelField name={""} />
       </div>

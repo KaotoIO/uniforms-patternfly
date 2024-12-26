@@ -242,8 +242,8 @@ test("<NumField> - renders a label", () => {
 test('<NumField> - renders a help', () => {
   render(usingUniformsContext(<NumField required={false} name="x" helperText="y" />, { x: { type: Number } }));
 
-  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v5-c-form__helper-text')).toBeInTheDocument();
-  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v5-c-form__helper-text')?.textContent).toBe('y');
+  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v6-c-form__helper-text')).toBeInTheDocument();
+  expect(screen.getByTestId('wrapper-field').querySelector('.pf-v6-c-form__helper-text')?.textContent).toBe('y');
 });
 
 test("<NumField> - renders a label", () => {

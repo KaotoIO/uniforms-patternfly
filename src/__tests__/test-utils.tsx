@@ -17,9 +17,9 @@
  * under the License.
  */
 
-import * as React from "react";
-import { Context, BaseForm, context, randomIds } from "uniforms";
+import { ReactElement } from "react";
 import SimpleSchema from "simpl-schema";
+import { BaseForm, Context, context, randomIds } from "uniforms";
 import { SimpleSchema2Bridge } from "uniforms-bridge-simple-schema-2";
 
 const randomId = randomIds();
@@ -30,7 +30,7 @@ export function createSimpleSchema(schema = {}) {
   return new SimpleSchema2Bridge({ schema: new SimpleSchema(schema) });
 }
 
-export function usingUniformsContext(children: React.ReactElement, schema = {}, ctx?: Partial<Context<any>>) {
+export function usingUniformsContext(children: ReactElement, schema = {}, ctx?: Partial<Context<any>>) {
   const partialCtx = {
     changed: false,
     changedMap: {},

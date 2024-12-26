@@ -17,11 +17,9 @@
  * under the License.
  */
 
-import { FormHelperText, HelperText, HelperTextItem } from '@patternfly/react-core/dist/js';
-import { ExclamationCircleIcon } from '@patternfly/react-icons/dist/js/icons/exclamation-circle-icon';
-import { TextInput, TextInputProps } from '@patternfly/react-core/dist/js/components/TextInput';
-import * as React from 'react';
-import { Ref, useCallback, useMemo } from 'react';
+import { FormHelperText, HelperText, HelperTextItem, TextInput, TextInputProps } from '@patternfly/react-core';
+import { ExclamationCircleIcon } from '@patternfly/react-icons';
+import { FormEvent, Ref, useCallback, useMemo } from 'react';
 import { connectField, filterDOMProps } from 'uniforms';
 import wrapField, { WrapFieldProps } from './wrapField';
 
@@ -127,7 +125,7 @@ function TextField({ onChange, ...props }: TextFieldProps) {
   }, [props.field?.format, props.type]);
 
   const onTextInputChange = useCallback(
-    (event: React.FormEvent<HTMLInputElement>, value: string) => {
+    (event: FormEvent<HTMLInputElement>, value: string) => {
       if (fieldType !== 'time' || value === '') {
         onChange((event.target as any)?.value);
         return;

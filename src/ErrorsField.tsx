@@ -17,12 +17,11 @@
  * under the License.
  */
 
-import * as React from 'react';
-import { HTMLProps } from 'react';
-import { useForm, filterDOMProps } from 'uniforms';
+import { CSSProperties, HTMLProps, ReactElement } from 'react';
+import { filterDOMProps, useForm } from 'uniforms';
 
 // Define the type for the style prop
-type Style = React.CSSProperties;
+type Style = CSSProperties;
 
 // Define the ErrorsFieldProps without defaultProps
 export type ErrorsFieldProps = HTMLProps<HTMLDivElement> & {
@@ -37,7 +36,7 @@ const defaultStyle: Style = {
   padding: '10px',
 };
 
-function ErrorsField({ children, style = {}, ...props }: ErrorsFieldProps): React.ReactElement | null {
+function ErrorsField({ children, style = {}, ...props }: ErrorsFieldProps): ReactElement | null {
   const { error, schema } = useForm();
 
   if (!error && !children) {

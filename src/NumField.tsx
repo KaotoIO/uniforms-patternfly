@@ -17,13 +17,11 @@
  * under the License.
  */
 
-import * as React from 'react';
-import { Ref } from 'react';
-import { TextInput, TextInputProps } from '@patternfly/react-core/dist/js/components/TextInput';
+import { FormHelperText, HelperText, HelperTextItem, TextInput, TextInputProps } from '@patternfly/react-core';
+import { ExclamationCircleIcon } from '@patternfly/react-icons';
+import { FormEvent, Ref } from 'react';
 import { connectField } from 'uniforms';
 import wrapField, { WrapFieldProps } from './wrapField';
-import { FormHelperText, HelperText, HelperTextItem } from '@patternfly/react-core';
-import { ExclamationCircleIcon } from '@patternfly/react-icons';
 
 export type NumFieldProps = {
   id: string;
@@ -39,7 +37,7 @@ export type NumFieldProps = {
   WrapFieldProps;
 
 function NumField(props: NumFieldProps) {
-  const onChange = (value: string, event: React.FormEvent<HTMLInputElement>) => {
+  const onChange = (value: string, event: FormEvent<HTMLInputElement>) => {
     const parse = props.decimal ? parseFloat : parseInt;
     const v = parse((event.target as any)?.value ?? '');
     props.onChange(isNaN(v) ? undefined : v);

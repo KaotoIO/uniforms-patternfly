@@ -17,7 +17,6 @@
  * under the License.
  */
 
-import * as React from "react";
 import { HTMLProps, Ref, useEffect } from "react";
 import { useField, filterDOMProps } from "uniforms";
 

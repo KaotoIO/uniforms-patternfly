@@ -17,10 +17,9 @@
  * under the License.
  */
 
-import * as React from "react";
+import { ButtonProps, Button } from "@patternfly/react-core";
+import { PlusCircleIcon } from "@patternfly/react-icons";
 import cloneDeep from "lodash/cloneDeep";
-import { Button, ButtonProps } from "@patternfly/react-core/dist/js/components/Button";
-import { PlusCircleIcon } from "@patternfly/react-icons/dist/js/icons/plus-circle-icon";
 import { connectField, FieldProps, filterDOMProps, joinName, useField } from "uniforms";
 
 export type ListAddFieldProps = FieldProps<
@@ -42,7 +41,7 @@ function ListAddField({ disabled = false, name, value, ...props }: ListAddFieldP
   const limitNotReached = !disabled && !(parent.maxCount! <= (parent.value?.length ?? -1));
 
   return (
-    <Button
+    <Button icon={<PlusCircleIcon color="#0088ce" />}
       data-testid={"list-add-field"}
       variant="plain"
       style={{ paddingLeft: "0", paddingRight: "0" }}
@@ -52,9 +51,7 @@ function ListAddField({ disabled = false, name, value, ...props }: ListAddFieldP
       }}
       {...filterDOMProps(props)}
       label='THIS IS A LABEL'
-    >
-      <PlusCircleIcon color="#0088ce" />
-    </Button>
+     />
   );
 }
 

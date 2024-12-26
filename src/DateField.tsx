@@ -17,17 +17,16 @@
  * under the License.
  */
 
-import * as React from "react";
-import { useMemo } from "react";
+import { TextInput, TextInputProps } from "@patternfly/react-core";
+import { RefObject, useMemo } from "react";
 import { connectField, FieldProps } from "uniforms";
-import { TextInput, TextInputProps } from "@patternfly/react-core/dist/js/components/TextInput";
 import wrapField, { WrapFieldProps } from "./wrapField";
 
 export type DateFieldProps = FieldProps<
   Date,
   TextInputProps & WrapFieldProps,
   {
-    inputRef?: React.RefObject<HTMLInputElement>;
+    inputRef?: RefObject<HTMLInputElement>;
     labelProps?: object;
     max?: Date;
     min?: Date;
@@ -114,11 +113,7 @@ function DateField({ onChange, ...props }: DateFieldProps) {
       {isInvalid && (
         <div
           id={`${props.id}-invalid-date-time`}
-          style={{
-            fontSize: "0.875rem",
-            color: "#c9190b",
-            marginTop: "0.25rem",
-          }}
+          className="invalid-date"
         >
           {isInvalid}
         </div>

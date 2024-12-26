@@ -17,8 +17,7 @@
  * under the License.
  */
 
-import * as React from 'react';
-import { HTMLProps } from 'react';
+import { CSSProperties, HTMLProps } from 'react';
 import { connectField, filterDOMProps, Override } from 'uniforms';
 
 export type ErrorFieldProps = Override<
@@ -26,11 +25,11 @@ export type ErrorFieldProps = Override<
   {
     error?: boolean;
     errorMessage?: string;
-    style?: React.CSSProperties;
+    style?: CSSProperties;
   }
 >;
 
-const defaultStyle: React.CSSProperties = {
+const defaultStyle: CSSProperties = {
   backgroundColor: 'rgba(255, 85, 0, 0.2)',
   border: '1px solid rgb(255, 85, 0)',
   borderRadius: '7px',
@@ -40,7 +39,7 @@ const defaultStyle: React.CSSProperties = {
 
 function ErrorField({ children, error, errorMessage, style = {}, ...props }: ErrorFieldProps) {
   // Merge default styles with any styles passed via props
-  const combinedStyle: React.CSSProperties = { ...defaultStyle, ...style };
+  const combinedStyle: CSSProperties = { ...defaultStyle, ...style };
 
   return !error ? null : (
     <div data-testid={'error-field'} style={combinedStyle} {...filterDOMProps(props)}>
