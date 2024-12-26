@@ -119,9 +119,9 @@ test('<RadioField> - renders a set of checkboxes with correct options', () => {
   );
 
   expect(screen.getByTestId('wrapper-field')).toBeInTheDocument();
-  expect(screen.getByTestId('wrapper-field').getElementsByClassName('pf-v5-c-radio__label')).toHaveLength(2);
-  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v5-c-radio__label')[0].textContent).toBe('a');
-  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v5-c-radio__label')[1].textContent).toBe('b');
+  expect(screen.getByTestId('wrapper-field').getElementsByClassName('pf-v6-c-radio__label')).toHaveLength(2);
+  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v6-c-radio__label')[0].textContent).toBe('a');
+  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v6-c-radio__label')[1].textContent).toBe('b');
 });
 
 test('<RadioField> - renders a set of checkboxes with correct options (transform)', () => {
@@ -133,9 +133,9 @@ test('<RadioField> - renders a set of checkboxes with correct options (transform
   );
 
   expect(screen.getByTestId('wrapper-field')).toBeInTheDocument();
-  expect(screen.getByTestId('wrapper-field').getElementsByClassName('pf-v5-c-radio__label')).toHaveLength(2);
-  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v5-c-radio__label')[0].textContent).toBe('A');
-  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v5-c-radio__label')[1].textContent).toBe('B');
+  expect(screen.getByTestId('wrapper-field').getElementsByClassName('pf-v6-c-radio__label')).toHaveLength(2);
+  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v6-c-radio__label')[0].textContent).toBe('A');
+  expect(screen.getByTestId('radio-field').getElementsByClassName('pf-v6-c-radio__label')[1].textContent).toBe('B');
 });
 
 test('<RadioField> - renders a set of checkboxes with correct value (default)', () => {

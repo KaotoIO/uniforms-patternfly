@@ -1,4 +1,4 @@
-import { Button, Popover, PopoverProps, Text, TextVariants } from '@patternfly/react-core';
+import { Button, Content, ContentVariants, Popover, PopoverProps } from '@patternfly/react-core';
 import { HelpIcon } from '@patternfly/react-icons';
 import { FunctionComponent } from 'react';
 import './FieldHintPopover.scss';
@@ -23,20 +23,18 @@ const FieldHintPopover: FunctionComponent<FieldHintPopoverProps> = (props) => {
       aria-label="Property description"
       bodyContent={props.description}
       data-testid="property-description-popover"
-      footerContent={<Text component={TextVariants.small}>Default: {props.default ?? <i>No default value</i>}</Text>}
-      className="pf-v5-u-my-0"
+      footerContent={<Content component={ContentVariants.small}>Default: {props.default ?? <i>No default value</i>}</Content>}
+      className="pf-v6-u-my-0"
       triggerAction="hover"
       withFocusTrap={false}
     >
-      <Button
+      <Button icon={<HelpIcon />}
         variant="plain"
         type="button"
         aria-label="More info for field"
         className="field-hint-button"
         data-testid="field-hint-button"
-      >
-        <HelpIcon />
-      </Button>
+       />
     </Popover>
   );
 };

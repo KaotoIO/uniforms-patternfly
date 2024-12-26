@@ -17,13 +17,13 @@
  * under the License.
  */
 
+import { fireEvent, render, screen } from '@testing-library/react';
 import SelectField from '../SelectField';
-import { render, screen, fireEvent, act } from '@testing-library/react';
 import { usingUniformsContext } from './test-utils';
 
 test('<SelectField checkboxes> - renders a set of checkboxes', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -34,7 +34,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes', () => {
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct disabled state', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" disabled checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" disabled checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -47,7 +47,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct disabl
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct id (inherited)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -60,7 +60,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct id (in
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct id (specified)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" id="y" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" id="y" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -73,7 +73,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct id (sp
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct name', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -86,7 +86,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct name',
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct options', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -101,7 +101,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct option
   render(
     usingUniformsContext(
       <SelectField
-        onToggle={() => {}}
+
         name="x"
         transform={(x: string) => ({ label: x.toUpperCase() })}
         checkboxes={true}
@@ -118,7 +118,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct option
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct value (default)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -132,7 +132,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct value 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct value (model)', () => {
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" checkboxes={true} />,
+      <SelectField name="x" checkboxes={true} />,
       { x: { type: String, options: ['a', 'b'] } },
       { model: { x: 'b' } },
     ),
@@ -146,7 +146,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes with correct value 
 
 test('<SelectField checkboxes> - renders a set of checkboxes with correct value (specified)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" value="b" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" value="b" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -162,7 +162,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes which correctly rea
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" checkboxes={true} />,
+      <SelectField name="x" checkboxes={true} />,
       { x: { type: String, options: ['a', 'b'] } },
       { onChange },
     ),
@@ -180,7 +180,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes which correctly rea
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" checkboxes={true} />,
+      <SelectField name="x" checkboxes={true} />,
       {
         x: { type: Array },
         'x.$': { type: String, options: ['a', 'b'] },
@@ -201,7 +201,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes which correctly rea
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" value={['b']} checkboxes={true} />,
+      <SelectField name="x" value={['b']} checkboxes={true} />,
       {
         x: { type: Array },
         'x.$': { type: String, options: ['a', 'b'] },
@@ -222,7 +222,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes which correctly rea
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" checkboxes={true} />,
+      <SelectField name="x" checkboxes={true} />,
       { x: { type: String, options: ['a', 'b'] } },
       { model: { x: 'b' }, onChange },
     ),
@@ -238,7 +238,7 @@ test('<SelectField checkboxes> - renders a set of checkboxes which correctly rea
 
 test('<SelectField checkboxes> - renders a label', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" label="y" checkboxes={true} />, {
+    usingUniformsContext(<SelectField name="x" label="y" checkboxes={true} />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -250,7 +250,7 @@ test('<SelectField checkboxes> - renders a label', () => {
 
 test('<SelectField> - renders a select', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" />, {
+    usingUniformsContext(<SelectField name="x" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -261,7 +261,7 @@ test('<SelectField> - renders a select', () => {
 
 test('<SelectField> - renders a select with correct disabled state', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" disabled />, {
+    usingUniformsContext(<SelectField name="x" disabled />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -273,7 +273,7 @@ test('<SelectField> - renders a select with correct disabled state', () => {
 
 test('<SelectField> - renders a select with correct id (specified)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" id="y" />, {
+    usingUniformsContext(<SelectField name="x" id="y" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -285,7 +285,7 @@ test('<SelectField> - renders a select with correct id (specified)', () => {
 
 test('<SelectField> - renders a select with correct name', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" />, {
+    usingUniformsContext(<SelectField name="x" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -298,7 +298,7 @@ test('<SelectField> - renders a select with correct name', () => {
 
 test('<SelectField> - renders a select with correct options', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" />, {
+    usingUniformsContext(<SelectField name="x" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -315,7 +315,7 @@ test('<SelectField> - renders a select with correct options (transform)', () => 
   render(
     usingUniformsContext(
       <SelectField
-        onToggle={() => {}}
+
         name="x"
         transform={(x: string) => ({ label: x.toUpperCase() })}
       />,
@@ -334,7 +334,7 @@ test('<SelectField> - renders a select with correct options (transform)', () => 
 });
 
 test('<SelectField> - renders a select with correct options (numbers)', () => {
-  render(usingUniformsContext(<SelectField onToggle={() => {}} name="x" />, { x: { type: String, options: [1, 2] } }));
+  render(usingUniformsContext(<SelectField name="x" />, { x: { type: String, options: [1, 2] } }));
 
   const select = screen.getByRole('listbox');
   expect(select).toBeInTheDocument();
@@ -346,7 +346,7 @@ test('<SelectField> - renders a select with correct options (numbers)', () => {
 
 test.skip('<SelectField> - renders a select with correct placeholder (implicit)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" placeholder="y" />, {
+    usingUniformsContext(<SelectField name="x" placeholder="y" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -359,7 +359,7 @@ test.skip('<SelectField> - renders a select with correct placeholder (implicit)'
 
 test.skip('<SelectField> - renders a select with correct value (default)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" />, {
+    usingUniformsContext(<SelectField name="x" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -372,7 +372,7 @@ test.skip('<SelectField> - renders a select with correct value (default)', () =>
 test('<SelectField> - renders a select with correct value (model)', () => {
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" />,
+      <SelectField name="x" />,
       { x: { type: String, options: ['a', 'b'] } },
       { model: { x: 'b' } },
     ),
@@ -385,7 +385,7 @@ test('<SelectField> - renders a select with correct value (model)', () => {
 
 test('<SelectField> - renders a select with correct value (specified)', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} name="x" value="b" />, {
+    usingUniformsContext(<SelectField name="x" value="b" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -399,7 +399,7 @@ test('<SelectField> - renders a select which correctly reacts on change', () => 
   const onChange = jest.fn();
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" />,
+      <SelectField name="x" />,
       { x: { type: String, options: ['a', 'b'] } },
       { onChange },
     ),
@@ -418,7 +418,7 @@ test('<SelectField> - renders a select which correctly reacts on change (array)'
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" value={undefined} />,
+      <SelectField name="x" value={undefined} />,
       {
         x: { type: Array },
         'x.$': { type: String, options: ['a', 'b'] },
@@ -440,7 +440,7 @@ test('<SelectField> - renders a select which correctly reacts on change (placeho
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" placeholder={'test'} />,
+      <SelectField name="x" placeholder={'test'} />,
       { x: { type: String, options: ['a', 'b'] } },
       { onChange },
     ),
@@ -459,7 +459,7 @@ test('<SelectField> - renders a select which correctly reacts on change (same va
 
   render(
     usingUniformsContext(
-      <SelectField onToggle={() => {}} name="x" />,
+      <SelectField name="x" />,
       { x: { type: String, options: ['a', 'b'] } },
       { model: { x: 'b' }, onChange },
     ),
@@ -475,7 +475,7 @@ test('<SelectField> - renders a select which correctly reacts on change (same va
 
 test('<SelectField> - renders a label', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} required={false} name="x" label="y" />, {
+    usingUniformsContext(<SelectField required={false} name="x" label="y" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -487,7 +487,7 @@ test('<SelectField> - renders a label', () => {
 
 test('<SelectField> - renders a label', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} required={true} name="x" label="y" />, {
+    usingUniformsContext(<SelectField required={true} name="x" label="y" />, {
       x: { type: String, options: ['a', 'b'] },
     }),
   );
@@ -499,7 +499,7 @@ test('<SelectField> - renders a label', () => {
 
 test('<SelectField> - renders a number label', () => {
   render(
-    usingUniformsContext(<SelectField onToggle={() => {}} required={true} name="x" label={1} />, {
+    usingUniformsContext(<SelectField required={true} name="x" label={1} />, {
       x: { type: Number, options: [1, 2] },
     }),
   );
