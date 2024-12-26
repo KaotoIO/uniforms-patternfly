@@ -17,9 +17,8 @@
  * under the License.
  */
 
-import { Split, SplitItem } from "@patternfly/react-core/dist/js/layouts/Split";
-import * as React from "react";
-import { Children, ReactNode, cloneElement, isValidElement } from "react";
+import { Split, SplitItem } from "@patternfly/react-core";
+import { Children, ReactElement, ReactNode, cloneElement, isValidElement } from "react";
 import { HTMLFieldProps, connectField, filterDOMProps } from "uniforms";
 import FieldDetailsPopover from "./FieldDetailsPopover";
 import ListAddField from "./ListAddField";
@@ -87,7 +86,7 @@ function ListField({
         {value?.map((item, itemIndex) =>
           Children.map(children, (child, childIndex) =>
             isValidElement(child)
-              ? cloneElement(child as React.ReactElement<{ name: string }, string>, {
+              ? cloneElement(child as ReactElement<{ name: string }, string>, {
                   key: `${itemIndex}-${childIndex}`,
                   name: child.props.name
                     ?.split(/\$(.*)/s)

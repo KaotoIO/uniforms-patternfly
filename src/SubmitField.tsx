@@ -17,11 +17,11 @@
  * under the License.
  */
 
-import { Button, ButtonProps } from '@patternfly/react-core/dist/js/components/Button';
-import * as React from 'react';
+import { Button, ButtonProps } from '@patternfly/react-core';
+import { RefObject } from 'react';
 import { Override, useForm } from 'uniforms';
 
-export type SubmitFieldProps = Override<ButtonProps, { inputRef?: React.RefObject<HTMLButtonElement> }>;
+export type SubmitFieldProps = Override<ButtonProps, { inputRef?: RefObject<HTMLButtonElement> }>;
 
 function SubmitField({ disabled, inputRef, value = 'Submit', ...props }: SubmitFieldProps) {
   const { error, state } = useForm();

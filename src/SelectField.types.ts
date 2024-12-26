@@ -17,9 +17,7 @@
  * under the License.
  */
 
-import { SelectDirection, SelectProps } from '@patternfly/react-core/deprecated';
-import { CheckboxProps } from '@patternfly/react-core/dist/js/components/Checkbox';
-import { RadioProps } from '@patternfly/react-core/dist/js/components/Radio';
+import { CheckboxProps, RadioProps, FormSelectProps } from '@patternfly/react-core';
 import { FieldProps } from 'uniforms';
 
 export type SelectCheckboxProps = FieldProps<
@@ -37,7 +35,7 @@ export type SelectCheckboxProps = FieldProps<
 
 export type SelectInputProps = FieldProps<
   string | string[],
-  SelectProps,
+  Omit<FormSelectProps, 'children'>,
   {
     checkboxes?: boolean;
     required?: boolean;
@@ -48,7 +46,6 @@ export type SelectInputProps = FieldProps<
     disabled?: boolean;
     error?: boolean;
     transform?: TransformFn;
-    direction?: SelectDirection;
     menuAppendTo?: HTMLElement;
   }
 >;

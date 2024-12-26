@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import { Radio } from '@patternfly/react-core/dist/js/components/Radio';
+import { Radio } from '@patternfly/react-core';
 import { Fragment } from 'react';
 import { connectField, filterDOMProps, HTMLFieldProps } from 'uniforms';
 import { TransformFn } from './SelectField.types';

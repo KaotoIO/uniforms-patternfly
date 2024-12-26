@@ -17,8 +17,7 @@
  * under the License.
  */
 
-import * as React from "react";
-import { Form } from "@patternfly/react-core/dist/js/components/Form";
+import { Form } from "@patternfly/react-core";
 import { BaseForm, context } from "uniforms";
 
 function Patternfly(parent: any): any {
