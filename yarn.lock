@@ -3086,8 +3086,8 @@ __metadata:
   linkType: hard
 
 "@patternfly/react-core@npm:^5.0.0":
-  version: 5.4.10
-  resolution: "@patternfly/react-core@npm:5.4.10"
+  version: 5.4.12
+  resolution: "@patternfly/react-core@npm:5.4.12"
   dependencies:
     "@patternfly/react-icons": "npm:^5.4.2"
     "@patternfly/react-styles": "npm:^5.4.1"
@@ -3098,7 +3098,7 @@ __metadata:
   peerDependencies:
     react: ^17 || ^18
     react-dom: ^17 || ^18
-  checksum: 10/6997845d757ccbcbada99acf2d9349b144322a0017936ff7c3f1067fd3d6365a5d71129e20e430aa9da511e7966f404827e30968eb69ebc7077bd173f3dae357
+  checksum: 10/81377c49bacd67dc9a7190079d9a8ac488a14fffbaf147e99caa3dfbccd6eee4b1e4a9ef7b7ccd8dd6788af42b3e7ecdbbe8749e9cac383ecc0cc65430602f22
   languageName: node
   linkType: hard
 
