@@ -2509,7 +2509,7 @@ __metadata:
     "@types/invariant": "npm:^2.2.35"
     "@types/jest": "npm:^29.4.0"
     "@types/lodash": "npm:^4.14.168"
-    "@types/node": "npm:^20.0.0"
+    "@types/node": "npm:^22.0.0"
     "@types/react": "npm:^18.0.0"
     "@types/react-dom": "npm:^18.0.0"
     "@types/simpl-schema": "npm:^1.12.0"
@@ -3916,12 +3916,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.0.0":
-  version: 20.17.10
-  resolution: "@types/node@npm:20.17.10"
+"@types/node@npm:^22.0.0":
+  version: 22.10.3
+  resolution: "@types/node@npm:22.10.3"
   dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10/9a1bcb2f25ce1ad249497e5f10ed984bf0ec476439fad2e965c3d6cc4642abb23c5e8400f7e48e55ff121d2b80b14bdc1bd4eac7ff6848154033a2be25fffb17
+    undici-types: "npm:~6.20.0"
+  checksum: 10/c63bd7800b82a53efd3fc0e115d045ae539eaa6367a7804fc17db84a311995a2228b8dce3e8eed089b4f91ae28224cfcf86086ff1ecf48a16c3b9efc03a725f8
   languageName: node
   linkType: hard
 
@@ -9957,13 +9957,6 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 10/4c0b800e0ff192079d2c3ce8414fd3b656a570028c7c79af5c29c53d5c532b68bbcae4ad47307f89c2ee124d11826fff7a136b59d5c5bb18422bcdf5568afe1e
-  languageName: node
-  linkType: hard
-
-"undici-types@npm:~6.19.2":
-  version: 6.19.8
-  resolution: "undici-types@npm:6.19.8"
-  checksum: 10/cf0b48ed4fc99baf56584afa91aaffa5010c268b8842f62e02f752df209e3dea138b372a60a963b3b2576ed932f32329ce7ddb9cb5f27a6c83040d8cd74b7a70
   languageName: node
   linkType: hard
 
