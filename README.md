@@ -1,6 +1,6 @@
 # This is a fork of the original library [@kie-tools/uniforms-patternfly](https://github.com/kiegroup/kie-tools/blob/15db722602e7029e2350d27c4c53eedc6ab6657f/packages/uniforms-patternfly/README.md)
 The goal of this fork is to update the following dependencies to the latest versions:
-1. Patternfly v5
+1. Patternfly v6
 2. React v18
 3. React-Dom v18
 4. uniforms v4.0.0-alpha.5
