@@ -2528,7 +2528,7 @@ __metadata:
     ts-node: "npm:^10.9.1"
     typescript: "npm:^5.0.2"
     uniforms: "npm:4.0.0"
-    uniforms-bridge-simple-schema-2: "npm:4.0.0-beta.4"
+    uniforms-bridge-simple-schema-2: "npm:4.0.0"
   peerDependencies:
     "@patternfly/react-core": ^6.1.0
     "@patternfly/react-icons": ^6.1.0
@@ -10153,17 +10153,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uniforms-bridge-simple-schema-2@npm:4.0.0-beta.4":
-  version: 4.0.0-beta.4
-  resolution: "uniforms-bridge-simple-schema-2@npm:4.0.0-beta.4"
+"uniforms-bridge-simple-schema-2@npm:4.0.0":
+  version: 4.0.0
+  resolution: "uniforms-bridge-simple-schema-2@npm:4.0.0"
   dependencies:
     invariant: "npm:^2.0.0"
     lodash: "npm:^4.0.0"
     tslib: "npm:2.8.0"
   peerDependencies:
     simpl-schema: ^1.0.0 || ^0.0.4
-    uniforms: 4.0.0-beta.4
-  checksum: 10/4f0c2d7dc2f83c8ec267e824e59568e5cc56bd45237fe58e7307c24863bbcff3cd3d2218b613f44f6ef4af09b97379475ac60058d96c16dd287dc9cdd2701087
+    uniforms: 4.0.0
+  checksum: 10/e13a2f7613c3857dc7cc69b020ad3e9b9d92155fea410802c482acfcf7b332bf87a2e91ed82829a6d91d4f40d4e9734d77e825849634bbc7708d4b516e253b60
   languageName: node
   linkType: hard
 
